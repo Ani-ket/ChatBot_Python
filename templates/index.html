@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chat-window">
+        {% if response %}
+            <div>{{ response }}</div>
+        {% endif %}
+    </div>
+    <form action="/" method="post">
+        <input type="text" name="message" id="message" autocomplete="off">
+        <input type="hidden" name="state" id="state" value="{{ state }}">
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
